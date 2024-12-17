@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dinamik Template</title>
+    <!-- bootstrap 4.4.1 -->
+    <link rel="stylesheet" href="./src/css/bootstrap-4/bootstrap.min.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="./src/css/reset-css/standardized.min.css">
+    <link rel="stylesheet" href="./src/css/reset-css/normalize.min.css">
+    <link rel="stylesheet" href="./src/css/reset-css/formalize.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+    <!-- select 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- style responsive css -->
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <div id="main-container" class="container-fluid overflow-contain">
+        <section id="wrapper-contain" class="close-menu row flex-column min-vh-100">
+            <section js-include-html="./components/header/index.html" class="starter-header col-auto">
+                <!-- header components -->
+            </section>
+            <section js-include-html="./components/actions/index.html" class="btn-group-wrapper col-auto">
+                <!-- actions components -->
+            </section>
+            <main class="main d-flex col col-md">
+                <article id="data-table" class="contain d-flex col">
+                    <div js-include-html="./components/table/arama-sonuc.html" id="arama-sonuc" class="table-div response-table table-responsive-md w-100 open d-flex"></div>
+                    <div js-include-html="./components/table/es-deger-urunler.html" id="es-deger-urunler" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                    <div js-include-html="./components/table/oem.html" id="oem" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                    <div js-include-html="./components/table/capraz-kodlar.html" id="capraz-kodlar" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                    <div js-include-html="./components/table/araclar.html" id="araclar" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                    <div js-include-html="./components/table/stok.html" id="stok" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                    <div js-include-html="./components/table/aldiklarim.html" id="aldiklarim" class="table-div response-table table-responsive-md w-100 d-flex"></div>
+                </article>
+            </main>
+            <footer js-include-html="./components/footer/index.html" class="footer col-auto flex-column flex-lg-row">
+                <!-- footer components -->
+            </footer>
+        </section>
+    </div>
+    <div js-include-html="./components/modal/img-modal.html" class="modal" tabindex="-1" role="dialog" id="exampleModal"></div>
+    <div js-include-html="./components/modal/box.html" class="box-modal modal" tabindex="-1" role="dialog" id="sepet"></div>
+</body>
+<!-- jquery 3.4.1 -->
+<script src="./src/js/jquery-3.4.1.min.js"></script>
+<!-- popper 1.16.0 -->
+<script src="./src/js/popper.min.js"></script>
+<!-- bootstrap 4.4.1 -->
+<script src="./src/js/bootstrap-4/bootstrap.min.js"></script>
+<!-- select 2 -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<!-- javascript -->
+<script src="./src/js/script.js"></script>
+
+</html>
